@@ -1,12 +1,87 @@
-## Альтек Проектирование
+# Альтек Проектирование
+## Правила именования репозиториев
 
-<!--
+**Разделитель:** `.`
 
-**Here are some ideas to get you started:**
+**Пример:**
 
-🙋‍♀️ A short introduction - what is your organization all about?
-🌈 Contribution guidelines - how can the community get involved?
-👩‍💻 Useful resources - where can the community find your docs? Is there anything else the community should know?
-🍿 Fun facts - what does your team eat for breakfast?
-🧙 Remember, you can do mighty things with the power of [Markdown](https://docs.github.com/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
--->
+```text
+Module.AR.Quartography
+```
+
+## Структура имени
+
+```text
+<Категория>.<Раздел>.<ИмяМодуля>
+```
+
+## Категории репозиториев
+
+Первое слово в имени репозитория определяет его категорию.
+
+| Категория | Описание |
+|-----------|----------|
+| `Module` | Модуль плагина |
+| `Package` | NuGet-пакет |
+| `App` | Самостоятельное приложение (Desktop/Web) |
+| `Infra` | Инфраструктурный компонент (CI/CD, API и т.д.) |
+
+Новые категории могут добавляться только по согласованию со всей командой разработчиков.
+
+## Именование репозиториев
+
+После категории указывается название репозитория.
+
+### Для плагинов
+
+Имя репозитория **обязательно должно состоять из двух частей**:
+
+1. Раздел.
+2. Имя модуля.
+
+Формат:
+
+```text
+Module.<Раздел>.<ИмяМодуля>
+```
+
+Пример:
+
+```text
+Module.AR.Quartography
+```
+
+### Для остальных репозиториев
+
+Имя может состоять из двух частей, если репозитории являются частью одной категории.
+
+Пример:
+
+```text
+Infra.DevOps.CI
+Infra.DevOps.CD
+```
+
+## Разделы для плагинов
+
+| Код | Описание |
+|------|----------|
+| `AR` | Архитектурный раздел |
+| `ST` | Конструктивный раздел |
+| `IOS` | Инженерные сети |
+| `BIM` | BIM-инструменты |
+| `Common` | Общие плагины, используемые всеми проектировщиками |
+
+## Примеры
+
+```text
+Module.AR.Quartography
+Module.ST.FlatFrame
+Module.IOS.IsolationManager
+Module.BIM.ReleaseWorksets
+Module.Common.FastOpen
+
+Package.Telemetry
+App.AltekHub
+Infra.CompileInstaller
+```
